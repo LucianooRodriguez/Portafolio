@@ -39,9 +39,12 @@ const Home = () => {
                                         Hola bienvenido/a a mi perfil, soy estudiante de la carrera Ingeniería en Sistemas ya en su última etapa. 
                                         Armo este portafolio con el propósito de abrirme al mercado laboral ya que considero que una nueva experiencia me ayudaría a crecer desde lo profesional para poder tener un punto de vista distinto a lo ya aprendido en mi rol actual. 
                                         Por esto, comparto mi Curriculum y mis proyectos realizados para que me conozcas mejor.</p>
-                                        <a href="../Curriculum" class="btn btn-primary boton1">Curriculum</a> 
-                                        <a href="../Proyectos" class="btn btn-primary boton1">Proyectos</a>
-                                    
+                                        <Link to={"/Curriculum"} >     
+                                                <a class="btn btn-primary boton1">Curriculum</a> 
+                                        </Link>
+                                        <Link to={"/Proyectos"} >     
+                                                <a class="btn btn-primary boton1">Proyectos</a> 
+                                        </Link>
 
                                 </div>
                             </div>

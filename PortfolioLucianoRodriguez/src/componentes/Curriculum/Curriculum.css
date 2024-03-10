@@ -1,0 +1,19 @@
+.bloque3{
+    margin: 5%;
+    height: 300px;
+    font-size: larger;
+    padding: 5%;
+    width: 700px;
+    
+}
+
+.titulo{
+    margin-top: 10px;
+}
+
+.boton1{
+    margin: 2%;
+    background-color: black;
+    color: white;
+    border-color: black;
+}

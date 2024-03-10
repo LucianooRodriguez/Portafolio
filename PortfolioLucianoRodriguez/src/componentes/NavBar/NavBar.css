@@ -1,0 +1,47 @@
+.navbar{
+    background-color: black !important;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+li{
+    cursor: pointer;
+    border-bottom: 2px white;
+    padding: 15px;
+    
+}
+
+a.Link{
+    color: white;
+    text-decoration-color: transparent;
+}
+
+a.Link.active{
+    font-size: medium;
+    color: black;
+    background-color: white;
+    padding: 7px;
+    border-radius: 50px;
+}
+
+.nav-item:hover {
+    transform: scale(1.1); 
+}
+
+.nombre1{
+    padding-left: 35px;
+    font-size:x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.nombre2{
+    padding-left: 50px;
+    text-decoration-line:underline;
+    text-align: center;
+    color: white;
+    font-size:x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

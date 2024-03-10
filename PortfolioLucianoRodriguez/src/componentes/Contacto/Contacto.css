@@ -1,0 +1,64 @@
+.seccion__contacto{
+    margin-top: 10vh;
+    height: 80vh;     
+}
+
+.form{
+    margin-top: 1vh;
+    padding: 25px;
+    height: 60vh;
+    width: 30vw;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.685);
+    opacity: 135%;
+    border-radius: 25px;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    font-weight: bolder;
+}
+
+.btn{
+    background-color: black;
+    border-color: black;
+}
+
+@media (max-width: 1070px) {
+    .seccion__contacto{
+        background-size: 80% 100%;
+    }
+
+    .form{
+        height: 45vh;
+        width: 60vw;
+        font-size: 15px;
+    }
+    .icono{
+        height: 18px;
+        width: 18px;
+      }
+    
+}
+
+@media (max-width: 400px) {
+    .seccion__contacto{
+        background-size: 95% 85%;
+        
+    }
+
+    .form{
+        height: 45vh;
+        width: 80vw;
+        
+    }
+    
+    .icono{
+        height: 18px;
+        width: 18px;
+      }
+
+      .btn{
+        height: 40px;
+        width: 60px;
+        font-size: 10px;
+    }
+}

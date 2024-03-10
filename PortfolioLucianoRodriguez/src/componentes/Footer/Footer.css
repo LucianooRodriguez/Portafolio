@@ -1,0 +1,18 @@
+.footer{
+    font-size: medium;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-top: 2%;
+}
+
+
+.icono{
+    height: 30px;
+    width: 38px;
+    padding-left: 2%;
+}
+
+.copyright{
+    margin-top: 10px;
+    font-size: smaller;
+}

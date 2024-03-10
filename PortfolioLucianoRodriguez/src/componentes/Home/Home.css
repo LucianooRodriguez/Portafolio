@@ -1,0 +1,77 @@
+.divgrande{
+    padding: 50px;
+    align-self: center;
+}
+
+
+.bloque1{
+    height:550px;
+    margin: 75px;
+}
+
+.bloque2{
+    padding: 5%;
+    height:350px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.fotoPerfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+    border-style:groove;
+    border-color: black;
+}
+
+.nombre{
+    padding-top: 10%;
+    font-size: 5vh;
+    font-style: normal;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
+.titulo{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 7vh;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.linkedin1{
+    height: 4vh;
+    width: 2vw;
+    padding: 2px;
+}
+
+.git1{
+    height: 4vh;
+    width: 2vw;
+    padding: 2px;
+}
+
+.whatsapp1{
+    height: 4vh;
+    width: 2vw;
+    padding: 2px;
+}
+
+.boton1{
+    margin: 2%;
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+@media (max-width: 576px) { 
+    .bloqueprincipal{
+        height: 100vh !important;
+    }
+
+    .video{
+        height: 100vh !important;
+    }
+
+}

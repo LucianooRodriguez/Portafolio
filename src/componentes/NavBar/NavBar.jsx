@@ -1,45 +1,33 @@
-import './NavBar.css'
-import { NavLink, Link } from "react-router-dom"
+import './NavBar.css';
+import { NavLink, Link } from "react-router-dom";
+import { useState } from 'react';
 
 const NavBar = () => {
-   
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
-        <header> 
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                
-                <Link to={"/"} >
-                    <p className='nombre2'>Luciano Rodriguez</p>     
+        <header className="header-container"> 
+            <nav className="custom-navbar">
+                <Link to="/" className="logo-container">
+                    <span className="logo-name">Luciano</span>
+                    <span className="logo-surname">Rodriguez</span>
                 </Link>
-                    
                 
-                <div className="container-fluid"> 
-                    
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon" />
-                    </button>
-                    <div className="collapse navbar-collapse d-flex justify-content-end " id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <NavLink to={"/"} className="Link"> Sobre mí </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to={"/Curriculum"} className="Link"> Curriculum </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to={"/Proyectos"} className="Link"> Proyectos </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to={"/Contacto"} className="Link"> Contacto </NavLink>
-                            </li>
-                        </ul>
-                    </div>
-                    
+                <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "Link active" : "Link"}>Sobre mí</NavLink>
+                    <NavLink to="/Curriculum" className={({ isActive }) => isActive ? "Link active" : "Link"}>Curriculum</NavLink>
+                    <NavLink to="/Proyectos" className={({ isActive }) => isActive ? "Link active" : "Link"}>Proyectos</NavLink>
+                    <NavLink to="/Contacto" className={({ isActive }) => isActive ? "Link active" : "Link"}>Contacto</NavLink>
+                </div>
+
+                <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
-
-
         </header>
-    )
+    );
 }
 
-export default NavBar
+export default NavBar;

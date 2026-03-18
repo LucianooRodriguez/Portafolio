@@ -1,64 +1,80 @@
-.seccion__contacto{
-    margin-top: 10vh;
-    height: 80vh;     
+.contacto-container {
+    padding: 4rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.form{
-    margin-top: 1vh;
-    padding: 25px;
-    height: 60vh;
-    width: 30vw;
-    font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.685);
-    opacity: 135%;
-    border-radius: 25px;
-    font-family:'Courier New', Courier, monospace;
+.titulo-contacto {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.glass-form-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 600px; /* Evita que se estire demasiado en desktop */
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.form-group input, .form-group textarea {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.btn-enviar {
+    background: var(--primary-color);
     color: black;
-    font-weight: bolder;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1rem;
 }
 
-.btn{
-    background-color: black;
-    border-color: black;
+.btn-enviar:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
 }
 
-@media (max-width: 1070px) {
-    .seccion__contacto{
-        background-size: 80% 100%;
-    }
-
-    .form{
-        height: 45vh;
-        width: 60vw;
-        font-size: 15px;
-    }
-    .icono{
-        height: 18px;
-        width: 18px;
-      }
-    
-}
-
-@media (max-width: 400px) {
-    .seccion__contacto{
-        background-size: 95% 85%;
-        
-    }
-
-    .form{
-        height: 45vh;
-        width: 80vw;
-        
-    }
-    
-    .icono{
-        height: 18px;
-        width: 18px;
-      }
-
-      .btn{
-        height: 40px;
-        width: 60px;
-        font-size: 10px;
-    }
+@media (max-width: 600px) {
+    .glass-form-container { padding: 1.5rem; }
+    .titulo-contacto { font-size: 2rem; }
 }

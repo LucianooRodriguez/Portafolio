@@ -1,17 +1,32 @@
-#root {
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 1rem;
-    text-align: center;
-  }
-
-
-#root1 {
-  max-width: 1560px;
-  margin: 0 auto;
-  padding: 0rem;
-  text-align: center;
-  background-image: url(/public/imagenes/imagen8.jpg);
-  background-size:auto;
+:root {
+  --primary-color: #00d2ff;
+  --bg-dark: #0a0a0a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text-main: #ffffff;
+  --text-secondary: #b0b0b0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor principal para que el contenido no toque los bordes */
+main {
+  flex: 1;
+  width: 100%;
+}

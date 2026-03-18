@@ -1,50 +1,36 @@
 import './Contacto.css'
 
 const Contacto = () => {
-   
     return (
-        <main class="bloqueprincipal">
-            <div class="card text-bg-dark">
+        <main className="contacto-container">
+            <h1 className="titulo-contacto">Hablemos</h1>
+            <div className="glass-form-container">
+                <form className="contacto-form">
+                    <div className="form-group">
+                        <label htmlFor="nombres">Nombre Completo</label>
+                        <input type="text" id="nombres" placeholder="Ej: Juan Pérez" />
+                    </div>
+                    
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" placeholder="tu@email.com" />
+                    </div>
 
-                    <h5 class="titulo card-title">Contacto</h5> 
-                    <section class="seccion__contacto d-flex justify-content-center">
-                        <article class="form row d-flex justify-content-center text-center">
-                            
-                            <form class="container-fluid row d-flex justify-content-center">
-                                <div class="col-lg-11">
-                                    <label class="nombres d-flex justify-content-start" for="specificSizeInputName">Nombres</label>
-                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Escriba sus nombres"/>
-                                </div>
-                                <div class="col-lg-11 ">
-                                    <label class="apellidos d-flex justify-content-start" for="specificSizeInputName">Apellidos</label>
-                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Escriba sus apellidos"/>
-                                </div>
-                                <div class="col-lg-11">
-                                    <label class="email d-flex justify-content-start" for="specificSizeInputName">Email</label>
-                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Email"/>
-                                </div>
-                                <div class="col-lg-11">
-                                    <label class="asunto d-flex justify-content-start" for="specificSizeInputName">Asunto</label>
-                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Asunto"/>
-                                </div>
-                                <div class="col-lg-11">
-                                    <label class="mensaje d-flex justify-content-start" for="specificSizeInputName">Mensaje</label>
-                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Mensaje"/>
-                                </div>
-                                <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                                </div>
-                            </form>
-                            
-                        </article>
-                    </section>
-                
+                    <div className="form-group">
+                        <label htmlFor="asunto">Asunto</label>
+                        <input type="text" id="asunto" placeholder="Oportunidad laboral / Consulta" />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="mensaje">Mensaje</label>
+                        <textarea id="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?"></textarea>
+                    </div>
+
+                    <button type="submit" className="btn-enviar">Enviar Mensaje</button>
+                </form>
             </div>
-           
-
-
         </main>
     )
 }
 
-export default Contacto
+export default Contacto;

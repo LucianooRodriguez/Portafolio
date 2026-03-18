@@ -1,18 +1,64 @@
-.footer{
-    font-size: medium;
-    padding-left: 30%;
-    padding-right: 30%;
-    margin-top: 2%;
+.footer-modern {
+    width: 100%;
+    padding: 2.5rem 0;
+    background-color: #050505;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: auto;
 }
 
-
-.icono{
-    height: 30px;
-    width: 38px;
-    padding-left: 2%;
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
 }
 
-.copyright{
-    margin-top: 10px;
-    font-size: smaller;
+.footer-socials {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon {
+    height: 25px; /* o 28px, como lo prefieras */
+    width: auto;
+    opacity: 0.6;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* === EL CAMBIO ESTÁ AQUÍ === */
+    /* 1. Hacemos que toda la imagen sea oscura (logo y fondo) */
+    filter: brightness(0); 
+    /* 2. Invertimos para que el logo oscuro se vuelva blanco y el fondo oscuro negro.
+       Como el fondo oscuro se mezcla con el fondo #050505, parece transparente. */
+    filter: brightness(0) invert(1);
+    /* 3. Un pequeño truco extra de Data Analyst: reducimos el contraste para limpiar
+       bordes grises que pudieran quedar. */
+    
+    /* ============================ */
+}
+
+.footer-icon:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    /* El celeste característico de tu portafolio */
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px #00d2ff);
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    .footer-socials {
+        gap: 1.5rem;
+    }
+    .footer-icon {
+        height: 22px;
+    }
 }

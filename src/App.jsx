@@ -9,22 +9,23 @@ import Footer from './componentes/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-          <NavBar/>
+    <BrowserRouter>
+      <div className="app-container">
+        <NavBar />
+        <main className="content-wrapper">
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Curriculum' element={<Curriculum />} />
             <Route path='/Proyectos' element={<Proyectos />} />
             <Route path='/Contacto' element={<Contacto/>} />
-            <Route exact path="*" element={<Error />} />
+            <Route path="*" element={<Error />} />
           </Routes>
-          <Footer/>
-      </BrowserRouter>
-    </>
-  )
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

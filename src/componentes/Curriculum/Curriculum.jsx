@@ -1,22 +1,40 @@
 import './Curriculum.css'
 
 const Curriculum = () => {
-   
+    // Vite sirve la carpeta public desde la raíz
+    const cvPath = "/CurriculumPDF/LucianoRodriguez(CV).pdf";
+
     return (
-        <header>
-            <div class="card text-bg-dark">
-                        <div class="row col-sm-12 d-flex justify-content-center">
-                            <h5 class="titulo card-title">Curriculum</h5> 
-                                <div class="bloque3 card">
-                                    <div class=" card-body">     
-                                            <p class="card-text">En esta sección, mediante la descarga del CV, tengo la posibilidad de contar mas sobre mi, ya que detallo cuales son mis estudios y la experiencia laboral hasta el momento, como también los cursos realizados y el avance sobre ellos.</p>
-                                            <a href="../CurriculumPDF/LucianoRodriguez(CV).pdf" class="btn btn-primary boton1">Descargar Curriculum</a>
-                                    </div>
-                                </div>
-                        </div>
+        <section className="curriculum-container">
+            <h1 className="titulo-seccion">Trayectoria Profesional</h1>
+            
+            <div className="cv-card">
+                <div className="cv-icon">
+                    {/* Icono de documento (podes usar una imagen o emoji) */}
+                    📄
+                </div>
+                <div className="cv-content">
+                    <p className="cv-text">
+                        En mi CV detallo mi formación como <strong>Ingeniero en Sistemas</strong>, 
+                        mi experiencia actual en análisis de datos y la evolución de mis 
+                        competencias técnicas en automatización y BI.
+                    </p>
+                    <div className="cv-badges">
+                        <span>Educación</span>
+                        <span>Experiencia</span>
+                        <span>Certificaciones</span>
+                    </div>
+                    <a 
+                        href={cvPath} 
+                        download="CV_Luciano_Rodriguez.pdf" 
+                        className="btn-download"
+                    >
+                        Descargar Curriculum (PDF)
+                    </a>
+                </div>
             </div>
-        </header>
+        </section>
     )
 }
 
-export default Curriculum
+export default Curriculum;
